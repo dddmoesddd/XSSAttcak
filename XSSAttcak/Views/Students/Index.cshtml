@@ -1,0 +1,22 @@
+﻿@model XSSAttcak.Controllers.StudentViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="md-10">
+
+            <form method="post" asp-action="SignUp" asp-controller="Students">
+
+                <label asp-for="FullName">Enter Full  Name</label>
+                <input asp-for="FullName" id="FullName" />
+                <input  type="submit"  value="Submit" />
+
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,17 @@
+﻿@model XSSAttcak.Controllers.StudentViewModel
+@{
+    ViewData["Title"] = "Result";
+}
+
+@*<h2>@Model.FullName</h2>
+*@
+
+ in unsafe mode
+<h2>@Html.Raw(Model.FullName)</h2>
+
+@*
+ --safe javascript mode
+@using System.Text.Encodings.Web
+<h2>@HtmlEncoder.Default.Encode(Model.FullName)</h2>
+@JavaScriptEncoder.Default.Encode(Model.FullName)
+@UrlEncoder.Default.Encode(Model.FullName)*@
